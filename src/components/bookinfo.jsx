@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Book = ({ book, onDelete }) => {
   const {
-    id, title, author, category, percentage,
+    id, title, author, category,
   } = book;
 
   return (

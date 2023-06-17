@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-const Addbook = ( ) => (
+const Addbook = () => (
   <section>
     <span>ADD NEW BOOK</span>
     <form>
