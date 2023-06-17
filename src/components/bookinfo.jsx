@@ -19,7 +19,6 @@ const Book = ({ book, onDelete }) => {
       <section>
         <div className="bookinfo" />
         <article className="percentages">
-          <span>{percentage}</span>
           <span>Complete</span>
         </article>
       </section>
