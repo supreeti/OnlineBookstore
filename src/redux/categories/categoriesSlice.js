@@ -9,11 +9,11 @@ const categories = createSlice({
   name: 'category',
   initialState,
   reducers: {
-    setStatus: (state, action) => {
-      state.status = action.payload;
+    toggleStatus: (state) => {
+      state.status = 'Under Construction...';
     },
   },
 });
 
 export default categories.reducer;
-export const { setStatus } = categories.actions;
+export const { toggleStatus } = categories.actions;
