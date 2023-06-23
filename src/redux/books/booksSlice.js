@@ -7,11 +7,11 @@ const bookSlice = createSlice({
   reducers: {
     add: (state, action) => {
       const newBook = action.payload;
-      state.BookList.push(newBook);
+      state.push(newBook);
     },
     remove: (state, action) => {
       const bookId = action.payload;
-      state.BookList = state.BookList.filter((book) => book.id !== bookId);
+      state.filter((book) => book !== bookId);
     },
   },
 });
