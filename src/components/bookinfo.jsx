@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { remove } from '../redux/books/booksSlice';
 
-const Book = ({ book, onDelete }) => {
-  const {
-    id, title, author, category,
-  } = book;
+const Book = ({ id: id, title, author, category, }) => {
+  const dispatch = useDispatch();
 
   return (
     <div className="bookstoredata">
@@ -13,7 +12,9 @@ const Book = ({ book, onDelete }) => {
         <h2>{title}</h2>
         <h3>{author}</h3>
         <button type="submit">Comments</button>
-        <button type="submit" data-index={id} onClick={() => onDelete(id)}>Remove</button>
+        <div className="vertical-line" />
+        <button type="submit" onClick={() => dispatch(remove(id))}>Remove</button>
+        <div className="vertical-line" />
         <button type="submit">Edit</button>
       </section>
       <section>
@@ -29,16 +30,6 @@ const Book = ({ book, onDelete }) => {
       </section>
     </div>
   );
-};
-
-Book.propTypes = {
-  book: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-  }).isRequired,
-  onDelete: PropTypes.func.isRequired,
 };
 
 export default Book;

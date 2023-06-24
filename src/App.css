@@ -83,3 +83,58 @@ a {
   margin: 0 20px 10px 0;
   gap: 10px;
 }
+
+h2 {
+  font-weight: bold;
+  align-items: center;
+  font-size: 42px;
+}
+
+.form-container {
+  border-top: 1px solid rgba(147, 146, 146, 0.42);
+  padding-top: 2rem;
+}
+
+.form-container h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #676767e8;
+}
+
+.submit-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.submit-form .input {
+  height: 2.5rem;
+  padding-left: 1rem;
+  border: 1px solid rgba(193, 191, 191, 0.868);
+  outline: none;
+  border-radius: 4px;
+}
+
+.input-book {
+  width: 23%;
+}
+
+.category-input {
+  width: 23%;
+  height: 6rem;
+}
+
+.bookS {
+  cursor: pointer;
+  border: none;
+  background-color: #0290ff;
+  border-radius: 3px;
+  height: 2.5rem;
+  width: 18%;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-size: 1rem;
+}
