@@ -2,9 +2,10 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { remove } from '../redux/books/booksSlice';
 
-const Book = ({ id: id, title, author, category, }) => {
+const Book = ({
+  id, title, author, category,
+}) => {
   const dispatch = useDispatch();
-
   return (
     <div className="bookstoredata">
       <section>

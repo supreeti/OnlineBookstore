@@ -3,17 +3,17 @@ import '../App.css';
 import { useDispatch } from 'react-redux';
 import { add } from '../redux/books/booksSlice';
 
-const Addbook = ({ booklength }) => {
+const Addbook = ( ) => {
   const show = useDispatch();
   const [book, setBook] = useState({
-    id: booklength + 1,
+    id: 1,
     title: '',
     author: '',
     category: '',
   });
   const clear = () => {
     setBook({
-      id: booklength + 1,
+      id: 2,
       title: '',
       author: '',
       category: '',
@@ -23,7 +23,7 @@ const Addbook = ({ booklength }) => {
   const addNewBook = (e) => {
     e.preventDefault();
     if (book.title !== '') {
-      show(add({ id: booklength + 1, ...book }));
+      show(add({ id, ...book }));
       clear();
     }
   };
