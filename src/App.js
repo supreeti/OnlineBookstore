@@ -1,17 +1,18 @@
 import React from 'react';
+import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Navbar from './components/NavBar';
-import Books from './components/BookList';
-import Categories from './components/Categories';
+import Navigation from './Components/navigation';
+import BookList from './Components/booklist';
+import Category from './Components/categories';
 
 function App() {
   return (
     <>
-      <Navbar />
-      <div className="all-container">
+      <Navigation />
+      <div className="bookstore">
         <Routes>
-          <Route path="/" element={<Books />} />
-          <Route path="/categories" element={<Categories />} />
+          <Route path="/" element={<BookList />} />
+          <Route path="/categories" element={<Category />} />
         </Routes>
       </div>
     </>

@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Button({
-  onClick, btnName, btnValue,
+  onClick, btnm, btval,
 }) {
   return (
-    <button type="button" onClick={onClick} className={btnName}>
-      {btnValue}
+    <button type="button" onClick={onClick} className={btnm}>
+      {btval}
     </button>
   );
 }
 
 Button.propTypes = {
-  btnName: PropTypes.string.isRequired,
-  btnValue: PropTypes.string.isRequired,
+  btnm: PropTypes.string.isRequired,
+  btval: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 

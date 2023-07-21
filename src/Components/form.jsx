@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { addBook } from '../redux/books/booksSlice';
-import Button from './Button';
+import { add } from '../redux/books/booksSlice';
+import Button from './button';
+import '../App.css';
 
-function BookForm() {
+function Addbook() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
@@ -12,10 +13,10 @@ function BookForm() {
   const onTitleChange = (e) => setTitle(e.target.value);
   const onAuthorChange = (e) => setAuthor(e.target.value);
 
-  const saveBook = (e) => {
+  const save = (e) => {
     e.preventDefault();
     if (title && author) {
-      dispatch(addBook({
+      dispatch(add({
         item_id: nanoid(),
         title,
         author,
@@ -25,13 +26,13 @@ function BookForm() {
     }
   };
   return (
-    <div>
+    <div className="main">
       <h2 className="form-tittle">ADD NEW BOOK</h2>
-      <form className="book-form">
+      <form>
         <input
           type="text"
           id="input-tittle"
-          placeholder="Book tittle"
+          placeholder="Book Title"
           value={title}
           onChange={onTitleChange}
         />
@@ -42,10 +43,10 @@ function BookForm() {
           value={author}
           onChange={onAuthorChange}
         />
-        <Button type="submit" onClick={saveBook} btnName="Add-btn" btnValue="Add Book" />
+        <Button type="submit" onClick={save} btnm="Add-btn" btval="Add Book" />
       </form>
     </div>
   );
 }
 
-export default BookForm;
+export default Addbook;
